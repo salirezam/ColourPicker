@@ -24,6 +24,13 @@ android {
                 }
             }
         }
+        debug{
+            applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    outputFileName = "ColourPicker-${variant.versionName}-debug.apk"
+                }
+            }
+        }
     }
 }
 
