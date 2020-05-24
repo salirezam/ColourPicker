@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/main_activity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/labelA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/editA"
+            android:text="A"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <SeekBar
+            android:id="@+id/seekA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/editA"
+            android:layout_alignTop="@id/editA"
+            android:layout_toEndOf="@id/labelA"
+            android:layout_toStartOf="@+id/editA"
+            android:max="255"
+            android:progress="255" />
+
+        <EditText
+            android:id="@+id/editA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="3"
+            android:minEms="3"
+            android:text="255" />
+
+        <TextView
+            android:id="@+id/labelR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/editR"
+            android:layout_below="@id/labelA"
+            android:text="R"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <SeekBar
+            android:id="@+id/seekR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/editR"
+            android:layout_below="@+id/seekA"
+            android:layout_toEndOf="@+id/labelR"
+            android:layout_toStartOf="@+id/editR"
+            android:max="255"
+            android:progress="255" />
+
+        <EditText
+            android:id="@+id/editR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/editA"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="3"
+            android:minEms="3"
+            android:text="255" />
+
+        <TextView
+            android:id="@+id/labelG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/editG"
+            android:layout_below="@id/labelR"
+            android:text="G"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <SeekBar
+            android:id="@+id/seekG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/editG"
+            android:layout_below="@+id/seekR"
+            android:layout_toEndOf="@+id/labelG"
+            android:layout_toStartOf="@+id/editG"
+            android:max="255"
+            android:progress="255" />
+
+        <EditText
+            android:id="@+id/editG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/editR"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="3"
+            android:minEms="3"
+            android:text="255" />
+
+        <TextView
+            android:id="@+id/labelB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/editB"
+            android:layout_below="@id/labelG"
+            android:text="B"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <SeekBar
+            android:id="@+id/seekB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/editB"
+            android:layout_below="@+id/seekG"
+            android:layout_toEndOf="@+id/labelB"
+            android:layout_toStartOf="@+id/editB"
+            android:max="255"
+            android:progress="255" />
+
+        <EditText
+            android:id="@+id/editB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/editG"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="3"
+            android:minEms="3"
+            android:text="255" />
+
+        <TextView
+            android:id="@+id/brightnessLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/brightnessBar"
+            android:layout_alignTop="@id/brightnessBar"
+            android:layout_below="@id/labelB"
+            android:text="Brightness"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <SeekBar
+            android:id="@+id/brightnessBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seekB"
+            android:layout_toEndOf="@+id/brightnessLabel"
+            android:max="100"
+            android:progress="100" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/fullscreenButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="153dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="169dp"
+        android:text="Fullscreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+</android.support.constraint.ConstraintLayout>
